@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+public class project2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int key  = (int)(Math.random()*100)+1;
+        //System.out.println(key);
+        int geuss;
+        int n = 10;
+        do {
+            n--;
+            System.out.print("guess the number = ");
+            int myguess  = sc.nextInt();
+            if (key == myguess){
+                System.out.println("winner winner");
+                break;
+            }
+            if (key > myguess){
+                System.out.println("number thoda chota he bada socho");
+            }
+            else
+            {
+                System.out.println("number thoda bada he thoda chota socho ");
+            }
+            if(n == 0){
+                System.out.println("opps game over");
+            }
+        }while (true);
+        System.out.print("your key is = " + key);
+    }
+}
